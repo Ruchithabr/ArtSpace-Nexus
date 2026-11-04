@@ -1,0 +1,95 @@
+# 🎨 ArtSpace Nexus — Digital Art Gallery
+
+ArtSpace Nexus is a full-stack MERN (MongoDB, Express, React, Node.js) web application designed to connect artists with a broader audience. It provides a platform for creators to showcase their artwork, manage their portfolios, and interact with a community of art enthusiasts. 
+
+## ✨ Features
+
+- **User Authentication:** Secure login and registration system using JSON Web Tokens (JWT) and password hashing.
+- **Artwork Showcase:** Users can upload and display their artwork in a responsive, interactive gallery.
+- **Image Management:** Efficient image uploading and storage using Multer.
+- **User Profiles:** Personalized dashboards for artists to manage their uploaded content.
+- **Responsive UI:** A modern, mobile-friendly frontend built with React.js.
+
+## 🛠️ Tech Stack
+
+- **Frontend:** React.js, Axios, CSS
+- **Backend:** Node.js, Express.js
+- **Database:** MongoDB Atlas
+- **Authentication:** JWT (JSON Web Tokens), bcrypt.js
+- **File Uploads:** Multer
+
+## 📂 Project Structure
+
+The project is divided into two main components: the backend API and the frontend client.
+
+```text
+artspace-nexus1/
+│
+├── backend/                 # Node.js + Express Backend
+│   ├── middleware/          # Auth and upload middlewares
+│   ├── models/              # Mongoose schemas (User, Artwork)
+│   ├── routes/              # API endpoints
+│   ├── uploads/             # Uploaded images storage
+│   ├── .env                 # Environment variables (Ignored in Git)
+│   └── server.js            # Main backend entry point
+│
+└── frontend/                # React.js Frontend
+    ├── public/
+    ├── src/                 # React components, pages, and context
+    └── package.json
+```
+
+## 🚀 Installation & Setup
+
+To run this project locally, follow these steps:
+
+### Prerequisites
+- Node.js installed on your machine.
+- A MongoDB Atlas account (for the database).
+
+### 1. Backend Setup
+1. Clone the repository and navigate to the backend folder:
+   ```bash
+   git clone https://github.com/Ruchithabr/ArtSpace-Nexus.git
+   cd ArtSpace-Nexus/backend
+   ```
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Create a `.env` file in the `backend` root directory and add the following variables:
+   ```env
+   PORT=5000
+   MONGO_URI=your_mongodb_atlas_connection_string
+   JWT_SECRET=your_super_secret_jwt_key
+   JWT_EXPIRE=30d
+   NODE_ENV=development
+   ```
+4. Start the backend server (runs on port 5000):
+   ```bash
+   npm run dev
+   ```
+
+### 2. Frontend Setup
+1. Open a **second terminal** and navigate to the frontend folder:
+   ```bash
+   cd ArtSpace-Nexus/frontend
+   ```
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Start the React development server:
+   ```bash
+   npm start
+   ```
+4. The application will automatically open in your browser at `http://localhost:3000`.
+
+## 📫 Connect with Me
+
+- **LinkedIn:** [linkedin.com/in/ruchitha-br](https://linkedin.com/in/ruchitha-br)
+- **Email:** ruchitha.b.r.01@gmail.com
+- **GitHub:** [github.com/Ruchithabr](https://github.com/Ruchithabr)
+
+---
+*Developed as part of my Full-Stack Web Development portfolio.*

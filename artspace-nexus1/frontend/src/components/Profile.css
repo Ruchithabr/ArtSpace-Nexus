@@ -1,0 +1,243 @@
+.profile-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    min-height: 80vh;
+}
+
+.profile-header {
+    display: flex;
+    gap: 2rem;
+    padding: 2rem;
+    background: var(--bg-card);
+    border-radius: 20px;
+    border: 1px solid var(--border-color);
+    margin-bottom: 2rem;
+}
+
+.profile-avatar {
+    font-size: 5rem;
+    background: var(--bg-secondary);
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-info {
+    flex: 1;
+}
+
+.profile-info h1 {
+    font-size: 2rem;
+    color: var(--text-primary);
+    margin-bottom: 0.3rem;
+}
+
+.profile-email {
+    color: var(--text-secondary);
+    margin-bottom: 0.5rem;
+}
+
+.profile-bio {
+    color: var(--text-secondary);
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+}
+
+.profile-details {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+}
+
+.profile-details span {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.profile-details a {
+    color: var(--accent-primary);
+    text-decoration: none;
+}
+
+.edit-btn {
+    padding: 0.5rem 1.5rem;
+    background: var(--accent-primary);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.edit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(90, 176, 212, 0.3);
+}
+
+.profile-edit-form .form-group {
+    margin-bottom: 1rem;
+}
+
+.profile-edit-form .form-group label {
+    display: block;
+    margin-bottom: 0.3rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.profile-edit-form .form-group input,
+.profile-edit-form .form-group textarea {
+    width: 100%;
+    padding: 0.6rem;
+    border: 2px solid var(--border-color);
+    border-radius: 10px;
+    background: var(--input-bg);
+    color: var(--text-primary);
+}
+
+.profile-edit-form .form-group input:focus,
+.profile-edit-form .form-group textarea:focus {
+    outline: none;
+    border-color: var(--accent-primary);
+}
+
+.profile-actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.save-btn {
+    padding: 0.5rem 1.5rem;
+    background: #4ecdc4;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.cancel-btn {
+    padding: 0.5rem 1.5rem;
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.profile-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.stat-box {
+    background: var(--bg-card);
+    padding: 1.5rem;
+    border-radius: 15px;
+    text-align: center;
+    border: 1px solid var(--border-color);
+}
+
+.stat-number {
+    display: block;
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--accent-primary);
+}
+
+.stat-label {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.profile-artworks h2 {
+    margin-bottom: 1.5rem;
+    color: var(--text-primary);
+}
+
+.empty-artworks {
+    text-align: center;
+    padding: 3rem;
+    background: var(--bg-card);
+    border-radius: 15px;
+    border: 1px solid var(--border-color);
+}
+
+.empty-artworks p {
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+}
+
+.upload-link {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: 600;
+}
+
+.artworks-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.artwork-card {
+    background: var(--bg-card);
+    border-radius: 15px;
+    overflow: hidden;
+    text-decoration: none;
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+}
+
+.artwork-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow);
+    border-color: var(--accent-primary);
+}
+
+.artwork-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.artwork-card .artwork-info {
+    padding: 1rem;
+}
+
+.artwork-card .artwork-info h3 {
+    color: var(--text-primary);
+    font-size: 1rem;
+    margin-bottom: 0.3rem;
+}
+
+.artwork-card .artwork-info p {
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+}
+
+@media (max-width: 768px) {
+    .profile-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profile-avatar {
+        margin: 0 auto;
+    }
+
+    .profile-stats {
+        grid-template-columns: 1fr;
+    }
+}
